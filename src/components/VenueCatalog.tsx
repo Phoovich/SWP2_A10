@@ -1,6 +1,5 @@
 import Card from "./Card";
 import Link from "next/link";
-import { VenueItem, VenueJson } from "../../interface";
 
 export default async function VenueCatalog({
   venuesJson,
@@ -34,4 +33,3 @@ export default async function VenueCatalog({
     </div>
   );
 }
-

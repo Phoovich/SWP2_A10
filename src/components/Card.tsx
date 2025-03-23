@@ -30,9 +30,7 @@ export default function Card({
         />
       </div>
       <div className="w-full h-[30%] p-[10px]">
-        <h2 className="text-[14px] font-bold mb-1 text-[#501717] underline">
-          {venueName}
-        </h2>
+        <h2 className="text-[14px] font-bold mb-1 text-black">{venueName}</h2>
         {onRating ? (
           <div
             onClick={(e) => {

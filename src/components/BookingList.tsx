@@ -2,7 +2,6 @@
 import { AppDispatch, useAppSelector } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import { removeBooking } from "@/redux/features/bookSlice";
-import { BookingItem } from "../../interface";
 
 export default function BookingList() {
   const venueItems = useAppSelector((state) => state.bookSlice.bookItems);
@@ -19,7 +18,7 @@ export default function BookingList() {
       <>
         {venueItems.map((bookingItem: BookingItem) => (
           <div
-            className="bg-yellow-200 rounded px-5 py-2 my-2 text-black font-serif"
+            className="bg-gray-200 rounded px-5 py-2 my-2 text-black font-serif"
             key={bookingItem.nameLastname}
           >
             <div className="text-xl">{bookingItem.nameLastname}</div>
@@ -27,8 +26,7 @@ export default function BookingList() {
             <div className="text-sm">Location: {bookingItem.venue}</div>
             <div className="text-sm">Date: {bookingItem.bookDate}</div>
             <button
-              className="block rounded-md bg-[#501717] hover:bg-[#731f1f] 
-                                px-3 py-2 text-white shadow-sm"
+              className=" bg-white text-cyan-600 border border-cyan-600 font-semibold py-2 px-2 m-2 rounded hover:bg-cyan-600 hover:text-white hover:border-transparent "
               name="Book Venue"
               onClick={() => dispatch(removeBooking(bookingItem))}
             >
@@ -40,4 +38,3 @@ export default function BookingList() {
     );
   }
 }
-

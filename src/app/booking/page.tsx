@@ -3,7 +3,6 @@ import DateReserve from "@/components/DateReserve";
 import { TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
-import { BookingItem } from "../../../interface";
 import { addBooking } from "@/redux/features/bookSlice";
 import { useState } from "react";
 import { Dayjs } from "dayjs";
@@ -76,8 +75,7 @@ export default function Booking() {
       </div>
 
       <button
-        className="block rounded-md bg-[#501717] hover:bg-[#731f1f] 
-                px-3 py-2 text-white shadow-sm"
+        className=" bg-white text-cyan-600 border border-cyan-600 font-semibold py-2 px-2 m-2 rounded hover:bg-cyan-600 hover:text-white hover:border-transparent "
         name="Book Venue"
         onClick={makeBooking}
       >
