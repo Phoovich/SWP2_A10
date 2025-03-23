@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { BookingItem } from "../../../interface";
 
 type BookState = {
   bookItems: BookingItem[];
@@ -37,4 +36,3 @@ export const bookSlice = createSlice({
 
 export const { addBooking, removeBooking } = bookSlice.actions;
 export default bookSlice.reducer;
-
