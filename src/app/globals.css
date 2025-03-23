@@ -5,7 +5,8 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+  --font-mono:
+    ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
@@ -90,7 +91,8 @@ body {
 }
 
 body {
-  background-color: rgb(247, 245, 242);
+  color: rgb(var(--foreground-rgb));
+  margin-top: 50px;
 }
 
 a {
@@ -98,8 +100,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   html {
-    color-scheme: dark;
+    color-scheme: white;
   }
 }
